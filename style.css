@@ -12,11 +12,29 @@ h1 {
 
 /* Container do mural */
 .mural-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+    position: relative; /* Para usar posicionamento absoluto nos botões */
+    max-width: 1000px; /* Ajuste conforme o tamanho desejado */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+}
+
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#prev {
+    left: 0; /* Alinha o botão 'prev' à esquerda */
+}
+
+#next {
+    right: 0; /* Alinha o botão 'next' à direita */
 }
 
 /* Mural de fotos */
